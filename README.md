@@ -19,7 +19,8 @@ Permite registrar incidentes por tipo, gravedad y ubicación, tanto con coordena
 
 ### 1️) Clonar el repositorio
 
-git clone https://github.com/Exxo05/CSA.git
+git clone [https://github.com/Exxo05/CSA.git](https://github.com/Exxo05/CSA---Control-de-Seguridad-Asistido-.git)
+
 cd CSA
 
 ### 2️) Crear entorno virtual
