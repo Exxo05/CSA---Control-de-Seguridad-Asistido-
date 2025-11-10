@@ -51,7 +51,7 @@ pip freeze > requirements.txt
 
 ### 5️) Ejecutar la aplicación
 ```
-streamlit run app.py
+streamlit run main.py
 ```
 Esto abrirá la aplicación en tu navegador (por defecto en
 👉 http://localhost:8501)
