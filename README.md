@@ -49,6 +49,8 @@ Si no tienes el archivo requirements.txt, puedes instalar las necesarias con:
 ```
 pip install pandas folium geopy openpyxl pywebview tkintermapview matplotlib 
 ```
+Hay veces que al instalar el archivo requirements no instala todas las dependencias y salta un error.
+Normalmente folium y pandas. En estos casos verifica si son asi e instalalos manualmente.
 ### 5️) Ejecutar la aplicación
 ```
 python run_gui.py
