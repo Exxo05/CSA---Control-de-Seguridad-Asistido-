@@ -1,0 +1,8 @@
+pandas
+folium
+geopy
+openpyxl
+pywebview
+tkintermapview
+matplotlib
+sqlite3
