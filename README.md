@@ -47,7 +47,7 @@ pip install -r requirements.txt
 ```
 Si no tienes el archivo requirements.txt, puedes instalar las necesarias con:
 ```
-pip install pandas folium geopy openpyxl pywebview tkintermapview matplotlib sqlite3
+pip install pandas folium geopy openpyxl pywebview tkintermapview matplotlib 
 ```
 ### 5️) Ejecutar la aplicación
 ```
