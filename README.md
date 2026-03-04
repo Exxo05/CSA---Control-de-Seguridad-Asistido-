@@ -23,7 +23,7 @@ Permite gestionar la seguridad en tiempo real, clasificando incidentes por grave
  ### 1️) Clonar el repositorio
  ```
 git clone https://github.com/Exxo05/CSA---Control-de-Seguridad-Asistido-.git
-cd CSA
+cd ../CSA---Control-de-Seguridad-Asistido-
 ```
 ### 2️) Crear entorno virtual
 ⚠️ Este paso es importante para mantener las dependencias separadas del sistema. 
