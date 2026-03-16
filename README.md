@@ -1,4 +1,4 @@
-# CSA - Control de Seguridad Asistido (Versión media, sujeta a cambios)
+# CSA - Control de Seguridad Asistido (Versión Beta, sujeta a cambios)
 **CSA** es un sistema integral para el registro, despliegue táctico y visualización de incidentes urbanos.
 
 Permite gestionar la seguridad en tiempo real, clasificando incidentes por gravedad, recomendando el envío de patrullas y visualizando el estado de la ciudad en un mapa dinámico sincronizado con una base de datos SQL.
