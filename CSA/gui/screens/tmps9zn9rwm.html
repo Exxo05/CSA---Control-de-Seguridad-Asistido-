@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_aa79421ffd9130f04adbf11d718666ef {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position:fixed;bottom:30px;left:30px;z-index:9999;
+                background:white;padding:12px 16px;border-radius:8px;
+                box-shadow:0 2px 12px rgba(0,0,0,0.15);font-family:Segoe UI,sans-serif">
+        <div style="font-size:13px;font-weight:bold;color:#0A1F44;margin-bottom:6px">
+            🛡️ CSA — Estado operativo
+        </div>
+        <div style="font-size:12px;color:#DC2626">🚨 Activos: <b>1</b></div>
+        <div style="font-size:12px;color:#059669">✅ Finalizados: <b>0</b></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_aa79421ffd9130f04adbf11d718666ef" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_aa79421ffd9130f04adbf11d718666ef = L.map(
+                "map_aa79421ffd9130f04adbf11d718666ef",
+                {
+                    center: [40.4839, -3.3644],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_de5cf2868998f601e725c2a9e618c874 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_de5cf2868998f601e725c2a9e618c874.addTo(map_aa79421ffd9130f04adbf11d718666ef);
+        
+    
+            var feature_group_ed0e98dc36d0e095685a1faab7df73c8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_9df9343dbfc61e4f272cbeba0c87e147 = L.circle(
+                [40.4819, -3.3635],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_9df9343dbfc61e4f272cbeba0c87e147.bindTooltip(
+                `<div>
+                     Casco Histórico / Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_63e721672ef2cad74a482902dbbc44ad = L.marker(
+                [40.4819, -3.3635],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_c23eee99a79136c1f4a12a152c93e352 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eCasco Hist\u00f3rico / Centro\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_63e721672ef2cad74a482902dbbc44ad.setIcon(div_icon_c23eee99a79136c1f4a12a152c93e352);
+            
+    
+            var circle_b1bf24732ce0f81a9d04f69478ce2d26 = L.circle(
+                [40.48, -3.345],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_b1bf24732ce0f81a9d04f69478ce2d26.bindTooltip(
+                `<div>
+                     El Val
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4e073635da981837a9a89e8a405ec478 = L.marker(
+                [40.48, -3.345],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_239429bedd57f39748d8a21b43a23fcf = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eEl Val\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_4e073635da981837a9a89e8a405ec478.setIcon(div_icon_239429bedd57f39748d8a21b43a23fcf);
+            
+    
+            var circle_ac11699de769b76a0c990798ebfc4e5b = L.circle(
+                [40.4824, -3.3892],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_ac11699de769b76a0c990798ebfc4e5b.bindTooltip(
+                `<div>
+                     La Garena
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4c611ebdf72f5dd38f48fc8c69f1ac02 = L.marker(
+                [40.4824, -3.3892],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_07d3bb85bf01739d5b1797c9cc69e741 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eLa Garena\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_4c611ebdf72f5dd38f48fc8c69f1ac02.setIcon(div_icon_07d3bb85bf01739d5b1797c9cc69e741);
+            
+    
+            var circle_0fa69e7b0b9c6b009c960651816bf13c = L.circle(
+                [40.493, -3.359],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_0fa69e7b0b9c6b009c960651816bf13c.bindTooltip(
+                `<div>
+                     Chorrillo / Ensanche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0d2020289342403684c03d17008b9719 = L.marker(
+                [40.493, -3.359],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_aefaf8e95c4a6c9b8fc9b5405ed9f092 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eChorrillo / Ensanche\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_0d2020289342403684c03d17008b9719.setIcon(div_icon_aefaf8e95c4a6c9b8fc9b5405ed9f092);
+            
+    
+            var circle_2a292af7f19975c36eae30ee0dde1cb2 = L.circle(
+                [40.478, -3.375],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_2a292af7f19975c36eae30ee0dde1cb2.bindTooltip(
+                `<div>
+                     Reyes Católicos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_65338482514ce5c4812b93b60b3ed85b = L.marker(
+                [40.478, -3.375],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_9f882da1b2db8ddd51dce57d8e33f87d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eReyes Cat\u00f3licos\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_65338482514ce5c4812b93b60b3ed85b.setIcon(div_icon_9f882da1b2db8ddd51dce57d8e33f87d);
+            
+    
+            var circle_243b9aedd13e8e1d39b3b2ee50b9cee1 = L.circle(
+                [40.505, -3.35],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_243b9aedd13e8e1d39b3b2ee50b9cee1.bindTooltip(
+                `<div>
+                     Espartales
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4ed39d1d499d7e438212ff89fbed1c77 = L.marker(
+                [40.505, -3.35],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_95a5c19daa6a9038a022c2feecb8a20c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eEspartales\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_4ed39d1d499d7e438212ff89fbed1c77.setIcon(div_icon_95a5c19daa6a9038a022c2feecb8a20c);
+            
+    
+            var circle_ef518a241f5d52021da7d478c31cb228 = L.circle(
+                [40.476, -3.355],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_ef518a241f5d52021da7d478c31cb228.bindTooltip(
+                `<div>
+                     Nueva Alcalá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c67168345eec18f674756ef8ac919328 = L.marker(
+                [40.476, -3.355],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_822654f1740900d0a0dd7b9f69b102e7 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eNueva Alcal\u00e1\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_c67168345eec18f674756ef8ac919328.setIcon(div_icon_822654f1740900d0a0dd7b9f69b102e7);
+            
+    
+            var circle_4359f0fa87b7c7069400fa9fb0018a61 = L.circle(
+                [40.485, -3.37],
+                {"bubblingMouseEvents": true, "color": "#1976D2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1976D2", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.3, "radius": 600, "stroke": true, "weight": 1}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            circle_4359f0fa87b7c7069400fa9fb0018a61.bindTooltip(
+                `<div>
+                     Circunvalación / Periférico
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ca79dab0cdffc219fc9a3c663e60397a = L.marker(
+                [40.485, -3.37],
+                {
+}
+            ).addTo(feature_group_ed0e98dc36d0e095685a1faab7df73c8);
+        
+    
+            var div_icon_45d45b2761ba8b75b6201f16a613e0c7 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;color:#1976D2;font-weight:bold;white-space:nowrap;opacity:0.7\"\u003eCircunvalaci\u00f3n / Perif\u00e9rico\u003c/div\u003e",
+  "iconSize": [160, 20],
+  "iconAnchor": [0, 10],
+  "className": "empty",
+});
+        
+    
+                marker_ca79dab0cdffc219fc9a3c663e60397a.setIcon(div_icon_45d45b2761ba8b75b6201f16a613e0c7);
+            
+    
+            feature_group_ed0e98dc36d0e095685a1faab7df73c8.addTo(map_aa79421ffd9130f04adbf11d718666ef);
+        
+    
+            var feature_group_a3d35f2395e5d853801ba1f4d2acb0a8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_48fe4f4b9c167773f145a33b74db2508 = L.marker(
+                [40.481988934767, -3.3619040115533148],
+                {
+}
+            ).addTo(feature_group_a3d35f2395e5d853801ba1f4d2acb0a8);
+        
+    
+            var icon_ee079d9ff7cf8d7b70c1ed3eb4adf458 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24806e328b8883e475526ab49c274cfc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var i_frame_6354e13c6090f14a118b59e2dac0599e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J2ZvbnQtZmFtaWx5OlNlZ29lIFVJLHNhbnMtc2VyaWY7bWluLXdpZHRoOjIyMHB4O21heC13aWR0aDozMDBweCc+CiAgICAgICAgPGRpdiBzdHlsZT0nYmFja2dyb3VuZDojMEExRjQ0O2NvbG9yOndoaXRlO3BhZGRpbmc6OHB4IDEycHg7Ym9yZGVyLXJhZGl1czo0cHggNHB4IDAgMDsKICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6MTNweDtmb250LXdlaWdodDpib2xkJz7wn5S0IFBSSU9SSURBRCBDUsONVElDQSDigJQgQVJNQVMgREUgRlVFR08gLyBURVJST1JJU01PIChNVVkgQUxUQSk8L2Rpdj4KICAgICAgICA8ZGl2IHN0eWxlPSdwYWRkaW5nOjEwcHggMTJweDtib3JkZXI6MXB4IHNvbGlkICNFMkU4RjA7Ym9yZGVyLXRvcDpub25lOwogICAgICAgICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6MCAwIDRweCA0cHg7YmFja2dyb3VuZDp3aGl0ZSc+CiAgICAgICAgICAgIDxwIHN0eWxlPSdtYXJnaW46NHB4IDA7Zm9udC1zaXplOjEycHg7Y29sb3I6IzMzNDE1NSc+VmFyaW9zIGhvbWJyZXMgY29uIG1hc2NhcmFzIGhhbiBhdHJhY2FkbyB1biB0aWVuZGEgY29uIHBpc3RvbGFzPC9wPgogICAgICAgICAgICA8aHIgc3R5bGU9J2JvcmRlcjpub25lO2JvcmRlci10b3A6MXB4IHNvbGlkICNGMUY1Rjk7bWFyZ2luOjhweCAwJz4KICAgICAgICAgICAgPHAgc3R5bGU9J21hcmdpbjoycHggMDtmb250LXNpemU6MTFweDtjb2xvcjojNjQ3NDhCJz7wn5ONIENhc2NvIEhpc3TDs3JpY28gLyBDZW50cm88L3A+CiAgICAgICAgICAgIDxwIHN0eWxlPSdtYXJnaW46MnB4IDA7Zm9udC1zaXplOjExcHg7Y29sb3I6IzY0NzQ4Qic+8J+VkCAyMDI2LTA1LTA1IDEzOjI3OjM4PC9wPgogICAgICAgICAgICA8cCBzdHlsZT0nbWFyZ2luOjRweCAwO2ZvbnQtc2l6ZToxMXB4Jz48c3BhbiBzdHlsZT0nY29sb3I6I0RDMjYyNjtmb250LXdlaWdodDpib2xkJz7wn5qoIEFjdGl2bzwvc3Bhbj48L3A+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIA==" width="320" style="border:none !important;" height="180"></iframe>`)[0];
+                popup_24806e328b8883e475526ab49c274cfc.setContent(i_frame_6354e13c6090f14a118b59e2dac0599e);
+            
+        
+
+        marker_48fe4f4b9c167773f145a33b74db2508.bindPopup(popup_24806e328b8883e475526ab49c274cfc)
+        ;
+
+        
+    
+    
+            marker_48fe4f4b9c167773f145a33b74db2508.bindTooltip(
+                `<div>
+                     🔴 PRIORIDAD CRÍTICA — ARMAS DE FUEGO / T — Casco Histórico / Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48fe4f4b9c167773f145a33b74db2508.setIcon(icon_ee079d9ff7cf8d7b70c1ed3eb4adf458);
+            
+    
+            feature_group_a3d35f2395e5d853801ba1f4d2acb0a8.addTo(map_aa79421ffd9130f04adbf11d718666ef);
+        
+    
+            var feature_group_31e090d9fb0df468e1ee4821e45c78af = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_31e090d9fb0df468e1ee4821e45c78af.addTo(map_aa79421ffd9130f04adbf11d718666ef);
+        
+    
+            var feature_group_747f992361a73e7a1bb93d5cc220231f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_747f992361a73e7a1bb93d5cc220231f.addTo(map_aa79421ffd9130f04adbf11d718666ef);
+        
+    
+            var feature_group_f497b96cf64e77d0ba59b9403d32969b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var layer_control_d2808eaa11ab608055070d06c970b3bd_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_de5cf2868998f601e725c2a9e618c874,
+                },
+                overlays :  {
+                    "Zonas" : feature_group_ed0e98dc36d0e095685a1faab7df73c8,
+                    "\ud83d\udd34 Cr\u00edticos" : feature_group_a3d35f2395e5d853801ba1f4d2acb0a8,
+                    "\ud83d\udfe0 Alta" : feature_group_31e090d9fb0df468e1ee4821e45c78af,
+                    "\ud83d\udfe1 Media/Baja" : feature_group_747f992361a73e7a1bb93d5cc220231f,
+                    "\u2705 Finalizados" : feature_group_f497b96cf64e77d0ba59b9403d32969b,
+                },
+            };
+            let layer_control_d2808eaa11ab608055070d06c970b3bd = L.control.layers(
+                layer_control_d2808eaa11ab608055070d06c970b3bd_layers.base_layers,
+                layer_control_d2808eaa11ab608055070d06c970b3bd_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_aa79421ffd9130f04adbf11d718666ef);
+
+        
+</script>
+</html>
