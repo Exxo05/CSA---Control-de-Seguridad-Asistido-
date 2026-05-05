@@ -23,35 +23,19 @@ Permite gestionar la seguridad en tiempo real, clasificando incidentes por grave
  ### 1️) Clonar el repositorio
  ```
 git clone https://github.com/Exxo05/CSA---Control-de-Seguridad-Asistido-.git
-cd ../CSA---Control-de-Seguridad-Asistido-
+cd ../CSA---Control-de-Seguridad-Asistido-/CSA
 ```
-### 2️) Crear entorno virtual
-⚠️ Este paso es importante para mantener las dependencias separadas del sistema. 
-```
-python -m venv .venv
-```
-### 3️) Activar el entorno virtual
-Recuerda comprobar tu ruta, tienes que estar en ../CSA
-
-En Windows (CMD o PowerShell):
-```
-.venv\Scripts\activate
-```
-En Linux / macOS:
-```
-source .venv/bin/activate
-```
-### 4️) Instalar dependencias
+### 2) Instalar dependencias
 ```
 pip install -r requirements.txt
 ```
 Si no tienes el archivo requirements.txt, puedes instalar las necesarias con:
 ```
-pip install pandas folium geopy openpyxl pywebview tkintermapview matplotlib 
+pip install pandas folium geopy openpyxl pywebview tkintermapview matplotlib branca
 ```
 Hay veces que al instalar el archivo requirements no instala todas las dependencias y salta un error.
 Normalmente folium y pandas. En ese caso, instalalas manualmente.
-### 5️) Ejecutar la aplicación
+### 3) Ejecutar la aplicación
 ```
 python run_gui.py
 ```
@@ -67,6 +51,12 @@ La primera vez tarda un poco.
 ### 6️) Usa el botón "Actualizar Mapa" dentro del mapa para ver los cambios en tiempo real.
 ### 7️) En "Unidades", finaliza una intervención para marcar el incidente como resuelto (✅).
 ### 8️) Consulta "Estadísticas" para ver el análisis histórico de delitos por barrio.
+
+## Captura de pantalla
+Aquí puedes ver como se ve la app
+<p align="center">
+  <img src="CSA/portada.png" alt="portada" width="600">
+</p>
 
  ## 💡 Tecnologías utilizadas
 
