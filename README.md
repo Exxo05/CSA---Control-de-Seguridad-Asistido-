@@ -3,8 +3,8 @@
 
 Permite gestionar la seguridad en tiempo real, clasificando incidentes por gravedad, recomendando el envío de patrullas y visualizando el estado de la ciudad en un mapa dinámico sincronizado con una base de datos SQL.
 
-## Características principales
-✅ Registro inteligente de incidentes con clasificación automática de gravedad 
+## 🚀 Características principales
+✅ Registro inteligente de incidentes con clasificación automática de gravedad
 
 ✅ Asistente de Recomendación de Despliegue según nivel de riesgo
 
@@ -16,31 +16,65 @@ Permite gestionar la seguridad en tiempo real, clasificando incidentes por grave
 
 ✅ Panel de Estadísticas Operativas con gráficos de puntos calientes y delitos
 
-✅ Persistencia de datos profesional mediante SQLite ## Instalación y ejecución
+✅ Persistencia de datos profesional mediante SQLite
 
-## Instalacion y ejecucion
+## 🆕 Nuevas funcionalidades (última actualización)
 
- ### 1️) Clonar el repositorio
- ```
-git clone https://github.com/Exxo05/CSA---Control-de-Seguridad-Asistido-.git
-cd ../CSA---Control-de-Seguridad-Asistido-/CSA
+### 🔐 Sistema de login
+Ventana de acceso con usuario, contraseña y selección de turno.
+
+### 📋 Log de auditoría
+Registro completo de acciones (crear, editar, finalizar, etc.) indicando quién y cuándo.
+Visible directamente en el dashboard.
+
+### 🏠 Dashboard de turno
+Pantalla inicial con:
+KPIs en tiempo real (activos, finalizados hoy, unidades en servicio, en intervención)
+Tabla de incidentes activos con tiempo transcurrido
+Estado visual de todas las unidades
+Últimas 5 acciones del sistema
+
+### 📝 Notas internas por incidente
+Sistema de anotaciones con historial.
+Cada nota guarda autor y timestamp.
+
+### 🔔 Alertas sonoras
+
+3 pitidos → incidente crítico
+1 pitido → alta gravedad
+Funciona en Windows con winsound.
+
+### 💾 Backup automático
+
+Copia de la base de datos al iniciar
+Ubicación: datos/backups/
+Retención automática de 30 días
+
+### 👮 Usuario activo visible
+Nombre y rol del operador visibles en el sidebar.
+
+## ⚙️ Instalación y ejecución
+## 1) Clonar el repositorio
+```
+git clone https://github.com/Exxo05/CSA---Control-de-Seguridad-Asistido-.gitcd ../CSA---Control-de-Seguridad-Asistido-/CSA
 ```
 ### 2) Instalar dependencias
 ```
 pip install -r requirements.txt
 ```
-Si no tienes el archivo requirements.txt, puedes instalar las necesarias con:
+Si no tienes el archivo:
 ```
-pip install pandas folium geopy openpyxl pywebview tkintermapview matplotlib branca
+pip install pandas folium geopy openpyxl pywebview tkintermapview matplotlib brancaMostrar más líneas
 ```
-Hay veces que al instalar el archivo requirements no instala todas las dependencias y salta un error.
-Normalmente folium y pandas. En ese caso, instalalas manualmente.
+⚠️ Nota: En algunos casos requirements.txt no instala todo correctamente (especialmente folium o pandas).
+Instálalos manualmente si aparece algún error.
+
 ### 3) Ejecutar la aplicación
 ```
 python run_gui.py
 ```
-Esto abrirá la interfaz profesional de escritorio (GUI) del sistema CSA.
-La primera vez tarda un poco.
+Se abrirá la interfaz de escritorio del sistema CSA.
+⏳ La primera ejecución puede tardar unos segundos.
 
 ## Cómo probar el sistema
 ### 1️) Abre la app (python run_gui.py)
@@ -52,22 +86,18 @@ La primera vez tarda un poco.
 ### 7️) En "Unidades", finaliza una intervención para marcar el incidente como resuelto (✅).
 ### 8️) Consulta "Estadísticas" para ver el análisis histórico de delitos por barrio.
 
-## Captura de pantalla
-Aquí puedes ver como se ve la app
-<p align="center">
-  <img src="CSA/portada.png" alt="portada" width="600">
-</p>
+## 💡 Tecnologías utilizadas
 
- ## 💡 Tecnologías utilizadas
+### 🐍 Python 3.13+ — Lenguaje principal
 
-🐍 Python 3.13+: Lenguaje principal del proyecto. Potente, flexible y con una amplia comunidad.
+### 🖥️ Tkinter — Interfaz de escritorio
 
-🖥️ Tkinter: Framework para la creación de la interfaz de escritorio profesional y reactiva.
+### 🗺️ Folium — Mapas interactivos
 
-🗺️ Folium: Librería basada en Leaflet.js para generar mapas interactivos sincronizados con la operativa.
+### 📊 Pandas & Matplotlib — Análisis y gráficos
 
-📊 Pandas & Matplotlib: Herramientas esenciales para el manejo de la base de datos y generación de gráficos estadísticos.
+### 📍 Geopy — Geocodificación
 
-📍 Geopy: Utilizada para convertir direcciones en coordenadas geográficas (geocodificación).
+### 🗄️ SQLite3 — Persistencia de datos
 
-🗄️ SQLite3: Motor de base de datos relacional para la gestión persistente de incidentes y patrullas.
+### 🔊 Winsound — Alertas sonoras (Windows)
