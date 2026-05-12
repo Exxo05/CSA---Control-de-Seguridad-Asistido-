@@ -1,0 +1,9 @@
+{
+  "GOOGLE_MAPS_API_KEY": "",
+  "HERE_API_KEY": "",
+  "_instrucciones": {
+    "GOOGLE_MAPS_API_KEY": "Obtén tu clave gratis en https://console.cloud.google.com → APIs → Geocoding API. 40.000 geocodificaciones/mes gratis.",
+    "HERE_API_KEY": "Opcional. Obtén en https://developer.here.com — 250.000 geocodificaciones/mes gratis.",
+    "nota": "Deja el campo vacío ('') si no tienes la clave. El sistema usará Photon como fallback gratuito."
+  }
+}
